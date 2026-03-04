@@ -49,7 +49,7 @@ Each dataset instance includes the following files:
 |-----|-------------|
 | `alpha.csv` | Cross-sectional area of each part in squared millimetres. Each row corresponds to a part. This file contains a header. |
 | `beta.csv` | Binary parameter representing the availability of ships to sail from each harbour to each customer at each day. Each row has a combination and the column "Availability" shows the zero or one. This file contains a header. |
-| `customers.csv` | Coordinates of each offshore customer location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. Locations recovered from The Ministry of Petroleum and Energy Oil and Gas ([2018]) (https://www.regjeringen.no/en/topics/energy/oil-and-gas/id1003/). |
+| `customers.csv` | Coordinates of each offshore customer location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. Locations recovered from The Ministry of Petroleum and Energy Oil and Gas [(2018)) (https://www.regjeringen.no/en/topics/energy/oil-and-gas/id1003/)]. |
 | `eta.csv` | Weight of each part in kilograms. Each row corresponds to a part. This file contains a header. |
 | `harbors.csv` | Coordinates of each harbor location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. |
 | `lambda.csv` | Demand for each part for each customer in each day. Each row has a combination and the column "Value" has the number of units required. This file contains a header. |
