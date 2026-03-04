@@ -49,7 +49,7 @@ Each dataset instance includes the following files:
 |-----|-------------|
 | `alpha.csv` | Cross-sectional area of each part in squared millimetres. Each row corresponds to a part. This file contains a header. |
 | `beta.csv` | Binary parameter representing the availability of ships to sail from each harbour to each customer at each day. Each row has a combination and the column "Availability" shows the zero or one. This file contains a header. |
-| `customers.csv` | Coordinates of each offshore customer location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. Locations recovered from The Ministry of Petroleum and Energy Oil and Gas [(2018)] (https://www.regjeringen.no/en/topics/energy/oil-and-gas/id1003/). |
+| `customers.csv` | Coordinates of each offshore customer location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. Locations recovered from The Ministry of Petroleum and Energy Oil and Gas ([2018]) (https://www.regjeringen.no/en/topics/energy/oil-and-gas/id1003/). |
 | `eta.csv` | Weight of each part in kilograms. Each row corresponds to a part. This file contains a header. |
 | `harbors.csv` | Coordinates of each harbor location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. |
 | `lambda.csv` | Demand for each part for each customer in each day. Each row has a combination and the column "Value" has the number of units required. This file contains a header. |
@@ -79,7 +79,7 @@ This file collects several parameter required for each instance. Each row has th
 - *tau*: Weight capacity of a drone in kilograms.
 - *gamma*: Flying speed of drones in kilometres per hour.
 - *MT*: Maximum allowed drone route time per day in hours.
-- *delta*: Maximum distance a drone can travel without swapping battery in kilometers. Based on drones developed by NU Flight Services [(2020)] (https://www.nugroup.no/flight-services/solutionscargo) and Skyports Drone Services [(2023)] (https://skyportsdroneservices.com/delivery).
+- *delta*: Maximum distance a drone can travel without swapping battery in kilometers. Based on drones developed by NU Flight Services ([2020]) (https://www.nugroup.no/flight-services/solutionscargo) and Skyports Drone Services ([2023]) (https://skyportsdroneservices.com/delivery).
 - *Speed ship*: Speed of ships in knots.
 - *Demand days*: Number of days with due dates to schedule in the descomposition of the second stage. Parameter used for the proposed matheuristic for the rolling horizon.
 - *Overlap_final*: Number of days to overlap in the rolling horizon. Parameter used for the proposed matheuristic.
