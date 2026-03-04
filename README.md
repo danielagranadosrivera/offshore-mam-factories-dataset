@@ -73,7 +73,7 @@ This file collects several parameters required for each instance. Each row conta
 - *CP_f*: Setup cost to produce a part per unit of cross-sectional area at any MAM factory on any day (USD).
 - *CT*: Transportation cost per kilometre for drone delivery (USD).
 - *CT1*: Transportation cost per kilometre for land transport (truck) (USD).
-- *CT2*: Fixed handling cost for shipping by vessel in any period (USD).
+- *CT2*: Fixed handling cost for shipping by ship per one part in any period (USD).
 - *CT3*: Transportation cost per unit for drone delivery (USD).
 - *CT4*: Transportation cost per unit for land transport (truck) (USD).
 - *V_average*: Average relocation speed of a MAM factory (km/h).
