@@ -49,7 +49,7 @@ Each dataset instance includes the following files:
 |-----|-------------|
 | `alpha.csv` | Cross-sectional area of each part in squared millimetres. Each row corresponds to a part. This file contains a header. |
 | `beta.csv` | Binary parameter representing the availability of ships to sail from each harbour to each customer at each day. Each row has a combination and the column "Availability" shows the zero or one. This file contains a header. |
-| `customers.csv` | Coordinates of each offshore customer location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. |
+| `customers.csv` | Coordinates of each offshore customer location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. Locations recovered from The Ministry of Petroleum and Energy Oil and Gas [(2018)] (https://www.regjeringen.no/en/topics/energy/oil-and-gas/id1003/). |
 | `eta.csv` | Weight of each part in kilograms. Each row corresponds to a part. This file contains a header. |
 | `harbors.csv` | Coordinates of each harbor location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. |
 | `lambda.csv` | Demand for each part for each customer in each day. Each row has a combination and the column "Value" has the number of units required. This file contains a header. |
@@ -62,30 +62,30 @@ These files collectively define the input data required to solve the optimizatio
 ## Parameters.csv content
 This file collects several parameter required for each instance. Each row has the name of the parameter in column A and the value in column B. The definitions are:
 
-- Number of drones: As the name indicates, it is the name of drones available for the instance to run.
-- Periods: Total number of periods in the planning horizon of the instance. 
-- CR_f: Fixed relocation cost for moving a MAM factory in US dollars.
-- CR_v: Variable relocation cost per kilometre for moving a MAM factory in US dollars.
-- CP_f: Set-up cost to produce per cross-sectional area of a part at any MAM factory in any day in US dollars.
-- CT: Transport cost per kilometer for shipping by drone in US dollars.
-- CT1: Transport cost per kilometer for shipping by land (truck) in US dollars.
-- CT2: Fixed handling cost for shipping by ship in any period in US dollars.
-- CT3: Transport cost per unit for shipping by drones in US dollars.
-- CT4: Transport cost per unit for shipping by land (truck) in US dollars.
-- V_average: Average speed of moving when a MAM factory is being relocated in kilometres per hour.
-- r_estimation: Set-up time in the new location when relocating a MAM factory in hours.
-- M: Sufficiently large number.
-- MA: Maximum cross-sectional area available for batching in a build in squared millimetres.
-- tau: Weight capacity of a drone in kilograms.
-- gamma: Flying speed of drones in kilometres per hour.
-- MT: Maximum allowed drone route time per day in hours.
-- delta: Maximum distance a drone can travel without swapping battery in kilometers.
-- Speed ship: Speed of ships in knots.
-- Demand days: Number of days with due dates to schedule in the descomposition of the second stage. Parameter used for the proposed matheuristic for the rolling horizon.
-- Overlap_final: Number of days to overlap in the rolling horizon. Parameter used for the proposed matheuristic.
-- Rolling horizon: Number of days without demand in the descomposition of the planning horizon for the matheuristic. This days are considered without demand.
-- Overlap_ini: Number of days to overlap in the rolling horizon for the warmup of the matheuristic.
-- CB: Base cost for the quadratic penalty that depends on the number of unit late and the number of days.
+- *Number of drones*: As the name indicates, it is the name of drones available for the instance to run.
+- *Periods*: Total number of periods in the planning horizon of the instance. 
+- *CR_f*: Fixed relocation cost for moving a MAM factory in US dollars.
+- *CR_v*: Variable relocation cost per kilometre for moving a MAM factory in US dollars.
+- *CP_f*: Set-up cost to produce per cross-sectional area of a part at any MAM factory in any day in US dollars.
+- *CT*: Transport cost per kilometer for shipping by drone in US dollars.
+- *CT1*: Transport cost per kilometer for shipping by land (truck) in US dollars.
+- *CT2*: Fixed handling cost for shipping by ship in any period in US dollars.
+- *CT3*: Transport cost per unit for shipping by drones in US dollars.
+- *CT4*: Transport cost per unit for shipping by land (truck) in US dollars.
+- *V_average*: Average speed of moving when a MAM factory is being relocated in kilometres per hour.
+- *r_estimation*: Set-up time in the new location when relocating a MAM factory in hours.
+- *M*: Sufficiently large number.
+- *MA*: Maximum cross-sectional area available for batching in a build in squared millimetres.
+- *tau*: Weight capacity of a drone in kilograms.
+- *gamma*: Flying speed of drones in kilometres per hour.
+- *MT*: Maximum allowed drone route time per day in hours.
+- *delta*: Maximum distance a drone can travel without swapping battery in kilometers.
+- *Speed ship*: Speed of ships in knots.
+- *Demand days*: Number of days with due dates to schedule in the descomposition of the second stage. Parameter used for the proposed matheuristic for the rolling horizon.
+- *Overlap_final*: Number of days to overlap in the rolling horizon. Parameter used for the proposed matheuristic.
+- *Rolling horizon*: Number of days without demand in the descomposition of the planning horizon for the matheuristic. This days are considered without demand.
+- *Overlap_ini*: Number of days to overlap in the rolling horizon for the warmup of the matheuristic.
+- *CB*: Base cost for the quadratic penalty that depends on the number of unit late and the number of days.
 
 ---
 
