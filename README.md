@@ -1,16 +1,16 @@
-# Dataset used in “Drone-enhanced offshore spare part fulfilment using mobile additive manufacturing factories and multi-modal delivery” 
+# Dataset used in “Drone-enhanced offshore spare part fulfilment using mobile additive manufacturing factories and multi-modal delivery”
 
 ## Overview
 
-This repository contains the datasets used in the study "“Drone-enhanced offshore spare part fulfilment using mobile additive manufacturing factories and multi-modal delivery” published in the International Journal of Production Research.
+This repository contains the datasets used in the study **“Drone-enhanced offshore spare part fulfilment using mobile additive manufacturing factories and multi-modal delivery”**, published in the *International Journal of Production Research*.
 
 > **Associated Paper**
 >
-> Granados-Rivera, D., Silva, D. F., Smith, A. E., Sgarbossa, F., & Knofius, N. (2025). *Drone-enhanced offshore spare part fulfilment using mobile additive manufacturing factories and multi-modal delivery*. International Journal of Production Research, 1–26. https://doi.org/10.1080/00207543.2025.2540454 
+> Granados-Rivera, D., Silva, D. F., Smith, A. E., Sgarbossa, F., & Knofius, N. (2025). *Drone-enhanced offshore spare part fulfilment using mobile additive manufacturing factories and multi-modal delivery*. International Journal of Production Research, 1–26. https://doi.org/10.1080/00207543.2025.2540454
 
-The dataset supports both **numerical experiments** for the matheruistic validation and benchmarks, and the **case study**, enabling the evaluation of different instance sizes, capabilities, number of drones, penalization costs, and demand distributions.
+The dataset supports both **numerical experiments** for matheuristic validation and benchmarking, as well as the **case study**, enabling the evaluation of different instance sizes, factory capabilities, numbers of drones, penalty costs, and demand distributions.
 
-All data are provided in **CSV format** and are organized to facilitate reproducibility of computational experiments and validation of optimization models.
+All data are provided in **CSV format** and are organized to facilitate reproducibility of computational experiments and validation of the optimization models.
 
 ---
 
@@ -37,7 +37,8 @@ offshore-mam-factories-dataset-main/
         └── medium_instance_2/
 ```
 
-Each instance directory contains a complete set of CSV files describing the parameters required to run the optimization model and the heuristics.
+
+Each instance directory contains a complete set of CSV files describing the parameters required to run the optimization model and the proposed heuristics.
 
 ---
 
@@ -47,51 +48,55 @@ Each dataset instance includes the following files:
 
 | File | Description |
 |-----|-------------|
-| `alpha.csv` | Cross-sectional area of each part in squared millimetres. Each row corresponds to a part. This file contains a header. |
-| `beta.csv` | Binary parameter representing the availability of ships to sail from each harbour to each customer at each day. Each row has a combination and the column "Availability" shows the zero or one. This file contains a header. |
-| `customers.csv` | Coordinates of each offshore customer location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. Locations recovered from [The Ministry of Petroleum and Energy – Oil and Gas (2018)](https://www.regjeringen.no/en/topics/energy/oil-and-gas/id1003/). |
-| `eta.csv` | Weight of each part in kilograms. Each row corresponds to a part. This file contains a header. |
-| `harbors.csv` | Coordinates of each harbor location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. |
-| `lambda.csv` | Demand for each part for each customer in each day. Each row has a combination and the column "Value" has the number of units required. This file contains a header. |
-| `locations.csv` | Coordinates of each potentital location for the mobile additive manufactoring (MAM) factories considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. |
-| `parameters.csv` | This is a collection of different inputs required for each instance. The definition of each row is defined below. This file has a header.|
-| `theta.csv` | Binary matrix indicating if each MAM factory has the capability of producing each part. Columns represent each part and rows correspond to each factory. This file has a header. |
+| `alpha.csv` | Cross-sectional area of each part in square millimetres. Each row corresponds to one part. This file contains a header. |
+| `beta.csv` | Binary parameter indicating the availability of ships sailing from each harbour to each customer on each day. Each row represents a specific combination, and the column `Availability` indicates whether the connection is available (0 or 1). This file contains a header. |
+| `customers.csv` | Coordinates of each offshore customer location considered in the instance. Each row represents a location. `X` corresponds to longitude and `Y` corresponds to latitude. This file contains a header. Locations were obtained from [The Ministry of Petroleum and Energy – Oil and Gas (2018)](https://www.regjeringen.no/en/topics/energy/oil-and-gas/id1003/). |
+| `eta.csv` | Weight of each part in kilograms. Each row corresponds to one part. This file contains a header. |
+| `harbors.csv` | Coordinates of each harbour location considered in the instance. Each row represents a location. `X` corresponds to longitude and `Y` corresponds to latitude. This file contains a header. |
+| `lambda.csv` | Demand for each part for each customer on each day. Each row represents a combination, and the column `Value` indicates the number of units required. This file contains a header. |
+| `locations.csv` | Coordinates of potential locations for mobile additive manufacturing (MAM) factories considered in the instance. Each row represents a location. `X` corresponds to longitude and `Y` corresponds to latitude. This file contains a header. |
+| `parameters.csv` | Collection of different parameters required for each instance. Definitions of the parameters are provided below. This file contains a header. |
+| `theta.csv` | Binary matrix indicating whether each MAM factory has the capability to produce each part. Columns represent parts and rows represent factories. This file contains a header. |
 
 These files collectively define the input data required to solve the optimization problem studied in the research.
 
-## Parameters.csv content
-This file collects several parameter required for each instance. Each row has the name of the parameter in column A and the value in column B. The definitions are:
+---
 
-- *Number of drones*: As the name indicates, it is the name of drones available for the instance to run.
-- *Periods*: Total number of periods in the planning horizon of the instance. 
-- *CR_f*: Fixed relocation cost for moving a MAM factory in US dollars.
-- *CR_v*: Variable relocation cost per kilometre for moving a MAM factory in US dollars.
-- *CP_f*: Set-up cost to produce per cross-sectional area of a part at any MAM factory in any day in US dollars.
-- *CT*: Transport cost per kilometer for shipping by drone in US dollars.
-- *CT1*: Transport cost per kilometer for shipping by land (truck) in US dollars.
-- *CT2*: Fixed handling cost for shipping by ship in any period in US dollars.
-- *CT3*: Transport cost per unit for shipping by drones in US dollars.
-- *CT4*: Transport cost per unit for shipping by land (truck) in US dollars.
-- *V_average*: Average speed of moving when a MAM factory is being relocated in kilometres per hour.
-- *r_estimation*: Set-up time in the new location when relocating a MAM factory in hours.
-- *M*: Sufficiently large number.
-- *MA*: Maximum cross-sectional area available for batching in a build in squared millimetres.
-- *tau*: Weight capacity of a drone in kilograms.
-- *gamma*: Flying speed of drones in kilometres per hour.
-- *MT*: Maximum allowed drone route time per day in hours.
-- *delta*: Maximum distance a drone can travel without swapping battery in kilometers. Based on drones developed by [NU Flight Services (2020)](https://www.nordicunmanned.com/solutions#cargo) and [Skyports Drone Services (2023)](https://skyportsdroneservices.com/delivery).
-- *Speed ship*: Speed of ships in knots.
-- *Demand days*: Number of days with due dates to schedule in the descomposition of the second stage. Parameter used for the proposed matheuristic for the rolling horizon.
-- *Overlap_final*: Number of days to overlap in the rolling horizon. Parameter used for the proposed matheuristic.
-- *Rolling horizon*: Number of days without demand in the descomposition of the planning horizon for the matheuristic. This days are considered without demand.
-- *Overlap_ini*: Number of days to overlap in the rolling horizon for the warmup of the matheuristic.
-- *CB*: Base cost for the quadratic penalty that depends on the number of unit late and the number of days.
+## Parameters.csv content
+
+This file collects several parameters required for each instance. Each row contains the name of the parameter in column A and its value in column B. The parameters are defined as follows:
+
+- *Number of drones*: Number of drones available in the instance.
+- *Periods*: Total number of periods in the planning horizon.
+- *CR_f*: Fixed relocation cost for moving a MAM factory (USD).
+- *CR_v*: Variable relocation cost per kilometre for moving a MAM factory (USD).
+- *CP_f*: Setup cost to produce a part per unit of cross-sectional area at any MAM factory on any day (USD).
+- *CT*: Transportation cost per kilometre for drone delivery (USD).
+- *CT1*: Transportation cost per kilometre for land transport (truck) (USD).
+- *CT2*: Fixed handling cost for shipping by vessel in any period (USD).
+- *CT3*: Transportation cost per unit for drone delivery (USD).
+- *CT4*: Transportation cost per unit for land transport (truck) (USD).
+- *V_average*: Average relocation speed of a MAM factory (km/h).
+- *r_estimation*: Setup time required at a new location when relocating a MAM factory (hours).
+- *M*: Sufficiently large constant used in the optimization model.
+- *MA*: Maximum cross-sectional area available for batching in a build (square millimetres).
+- *tau*: Weight capacity of a drone (kg).
+- *gamma*: Flying speed of drones (km/h).
+- *MT*: Maximum allowed drone route time per day (hours).
+- *delta*: Maximum distance a drone can travel without battery replacement (km). Based on drones developed by [NU Flight Services (2020)](https://www.nordicunmanned.com/solutions#cargo) and [Skyports Drone Services (2023)](https://skyportsdroneservices.com/delivery).
+- *Speed ship*: Average speed of ships (knots).
+- *Demand days*: Number of days with due dates considered when scheduling demand in the decomposition of the second stage of the matheuristic.
+- *Overlap_final*: Number of overlapping days used in the rolling horizon procedure of the matheuristic.
+- *Rolling horizon*: Number of days without demand in the decomposition of the planning horizon. These days are considered demand-free.
+- *Overlap_ini*: Number of overlapping days used during the warm-up phase of the matheuristic.
+- *CB*: Base cost for the quadratic penalty function that depends on the number of late units and the number of delayed days.
 
 ---
 
 ## Case Study Data
 
-The `case_study` folder contains datasets derived from a real-world inspired scenario. 
+The `case_study` folder contains datasets derived from a real-world inspired scenario.
+
 Four demand distributions are considered:
 
 - `demand_distribution_1`
@@ -99,13 +104,13 @@ Four demand distributions are considered:
 - `demand_distribution_3`
 - `demand_distribution_4`
 
-Each directory represents a different demand scenario used to evaluate the robustness of the model. The demand distributions are generated by randomly dividing the 400 total demand by parts, then by customers, and finally by days.
+Each directory represents a different demand scenario used to evaluate the robustness of the model. The demand distributions are generated by randomly allocating the total demand of 400 units across parts, customers, and days.
 
 ---
 
 ## Numerical Experiments
 
-The `numerical_experiments` folder contains synthetic benchmark instances designed to test the scalability and computational performance of the model and the performance of the matheuristic.
+The `numerical_experiments` folder contains synthetic benchmark instances designed to evaluate the scalability and computational performance of the optimization model and the proposed matheuristic.
 
 Two instance sizes are provided:
 
@@ -117,7 +122,7 @@ Two instance sizes are provided:
 - `medium_instance_1`
 - `medium_instance_2`
 
-These datasets allow controlled evaluation of algorithmic performance under different problem sizes.
+These datasets enable controlled evaluation of algorithmic performance under different problem sizes.
 
 ---
 
@@ -125,7 +130,7 @@ These datasets allow controlled evaluation of algorithmic performance under diff
 
 All datasets are provided as **comma-separated values (CSV)** files.
 
-Files can be loaded using most scientific computing tools, including:
+The files can be loaded using most scientific computing tools, including:
 
 - Python (pandas)
 - R
@@ -137,7 +142,7 @@ Files can be loaded using most scientific computing tools, including:
 
 ## Reproducibility
 
-The dataset is structured so that each instance folder contains all necessary parameters to reproduce the computational experiments described in the associated [article](https://doi.org/10.1080/00207543.2025.2540454).
+The dataset is structured such that each instance folder contains all necessary parameters required to reproduce the computational experiments described in the associated [article](https://doi.org/10.1080/00207543.2025.2540454).
 
 Users can select any instance directory and directly load the CSV files as input to their implementation of the model.
 
@@ -157,4 +162,4 @@ If you use this dataset in your research, please cite it using the information p
 
 ## Contact
 
-For questions or issues related to the dataset, please open a GitHub issue in this repository. For my information about the research, please refer to the [article](https://doi.org/10.1080/00207543.2025.2540454).
+For questions or issues related to the dataset, please open a GitHub issue in this repository. For further information about the research, please refer to the associated [article](https://doi.org/10.1080/00207543.2025.2540454).
