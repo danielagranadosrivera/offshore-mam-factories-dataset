@@ -1,8 +1,7 @@
 # Dataset used in “Drone-enhanced offshore spare part fulfilment using mobile additive manufacturing factories and multi-modal delivery”
 
-[![DOI](https://img.shields.io/badge/DOI-10.1080%2F00207543.2025.2540454-blue)
-(https://doi.org/10.1080/00207543.2025.2540454)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![DOI](https://img.shields.io/badge/DOI-10.1080%2F00207543.2025.2540454-blue)](https://doi.org/10.1080/00207543.2025.2540454)
+[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Journal](https://img.shields.io/badge/Journal-IJPR-orange)](https://doi.org/10.1080/00207543.2025.2540454)
 
 ## Overview
