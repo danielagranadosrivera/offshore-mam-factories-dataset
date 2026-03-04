@@ -79,7 +79,7 @@ This file collects several parameter required for each instance. Each row has th
 - *tau*: Weight capacity of a drone in kilograms.
 - *gamma*: Flying speed of drones in kilometres per hour.
 - *MT*: Maximum allowed drone route time per day in hours.
-- *delta*: Maximum distance a drone can travel without swapping battery in kilometers.
+- *delta*: Maximum distance a drone can travel without swapping battery in kilometers. Based on drones developed by NU Flight Services [(2020)] (https://www.nugroup.no/flight-services/solutionscargo) and Skyports Drone Services [(2023)] (https://skyportsdroneservices.com/delivery).
 - *Speed ship*: Speed of ships in knots.
 - *Demand days*: Number of days with due dates to schedule in the descomposition of the second stage. Parameter used for the proposed matheuristic for the rolling horizon.
 - *Overlap_final*: Number of days to overlap in the rolling horizon. Parameter used for the proposed matheuristic.
