@@ -39,6 +39,8 @@ offshore-mam-factories-dataset-main/
 
 Each instance directory contains a complete set of CSV files describing the parameters required to run the optimization model and the heuristics.
 
+---
+
 ## Dataset Description
 
 Each dataset instance includes the following files:
