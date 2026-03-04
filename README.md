@@ -37,7 +37,7 @@ offshore-mam-factories-dataset-main/
         └── medium_instance_2/
 ```
 
-Each instance directory contains a complete set of CSV files describing the parameters required to run the optimization model.
+Each instance directory contains a complete set of CSV files describing the parameters required to run the optimization model and the heuristics.
 
 ## Dataset Description
 
@@ -45,15 +45,15 @@ Each dataset instance includes the following files:
 
 | File | Description |
 |-----|-------------|
-| `alpha.csv` | Production-related parameters |
-| `beta.csv` | Cost parameters |
-| `customers.csv` | Customer demand data |
-| `eta.csv` | Penalty parameters |
-| `harbors.csv` | Harbor characteristics |
-| `lambda.csv` | Transportation parameters |
-| `locations.csv` | Candidate facility locations |
+| `alpha.csv` | Cross-sectional area of each part in squared millimetres. Each row corresponds to a part. This file contains a header. |
+| `beta.csv` | Binary parameter representing the availability of ships to sail from each harbour to each customer at each day. Each row has a combination and the column "Availability" shows the zero or one. This file contains a header. |
+| `customers.csv` | Coordinates of each offshore customer location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. |
+| `eta.csv` | Weight of each part in kilograms. Each row corresponds to a part. This file contains a header. |
+| `harbors.csv` | Coordinates of each harbor location considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. |
+| `lambda.csv` | Demand for each part for each customer in each day. Each row has a combination and the column "Value" has the number of units required. This file contains a header. |
+| `locations.csv` | Coordinates of each potentital location for the mobile additive manufactoring factories considered in the instance. Each row has a location. "X" corresponds to the longitude and "Y" corresponds to the latitute. This file has a header. |
 | `parameters.csv` | General model parameters |
-| `theta.csv` | Capacity parameters |
+| `theta.csv` | Binary matrix indicating if each MAM factory has the capability of producing each part. Columns represent and row correspond to. This file has a header. |
 
 These files collectively define the input data required to solve the optimization problem studied in the research.
 
