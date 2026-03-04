@@ -4,7 +4,15 @@
 
 This repository contains the datasets used in the study "“Drone-enhanced offshore spare part fulfilment using mobile additive manufacturing factories and multi-modal delivery” published in the International Journal of Production Research.
 
-Granados-Rivera, D., Silva, D. F., Smith, A. E., Sgarbossa, F., & Knofius, N. (2025). Drone-enhanced offshore spare part   fulfilment using mobile additive manufacturing factories and multi-modal delivery. International Journal of Production Research, 1–26. https://doi.org/10.1080/00207543.2025.2540454
+> **📄 Associated Paper**
+>
+> *Drone-enhanced offshore spare part   fulfilment using mobile additive manufacturing factories and multi-modal delivery*  
+> Granados-Rivera, D., Silva, D. F., Smith, A. E., Sgarbossa, F., & Knofius, N.  
+> International Journal of Production Research, 1–26 
+> DOI: [https://doi.org/xxxx](https://doi.org/10.1080/00207543.2025.2540454)
+
+
+ (2025) . 
 
 The dataset supports both **numerical experiments** for the matheruistic validation and benchmarks, and the **case study**, enabling the evaluation of different instance sizes, capabilities, number of drones, penalization costs, and demand distributions.
 
