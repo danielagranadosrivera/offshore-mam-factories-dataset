@@ -60,8 +60,6 @@ Each dataset instance includes the following files:
 
 These files collectively define the input data required to solve the optimization problem studied in the research.
 
----
-
 ## Parameters.csv content
 
 This file collects several parameters required for each instance. Each row contains the name of the parameter in column A and its value in column B. The parameters are defined as follows:
