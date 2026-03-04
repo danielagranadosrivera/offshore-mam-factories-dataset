@@ -1,5 +1,10 @@
 # Dataset used in “Drone-enhanced offshore spare part fulfilment using mobile additive manufacturing factories and multi-modal delivery”
 
+[![DOI](https://img.shields.io/badge/DOI-10.1080%2F00207543.2025.2540454-blue)
+(https://doi.org/10.1080/00207543.2025.2540454)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Journal](https://img.shields.io/badge/Journal-IJPR-orange)](https://doi.org/10.1080/00207543.2025.2540454)
+
 ## Overview
 
 This repository contains the datasets used in the study **“Drone-enhanced offshore spare part fulfilment using mobile additive manufacturing factories and multi-modal delivery”**, published in the *International Journal of Production Research*.
