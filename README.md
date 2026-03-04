@@ -36,6 +36,7 @@ offshore-mam-factories-dataset-main/
         ├── medium_instance_1/
         └── medium_instance_2/
 ```
+
 Each instance directory contains a complete set of CSV files describing the parameters required to run the optimization model.
 
 ## Dataset Description
