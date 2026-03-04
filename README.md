@@ -16,24 +16,26 @@ All data are provided in **CSV format** and are organized to facilitate reproduc
 
 ## Repository Structure
 
-offshore-mam-factories-dataset-main/ 
-│ 
-├── README.md 
-├── LICENSE 
-├── CITATION.cff 
-│ └── data/ 
-    ├── case_study/ 
-    │ ├── demand_distribution_1/ 
-    │ ├── demand_distribution_2/ 
-    │ ├── demand_distribution_3/ 
-    │ └── demand_distribution_4/ 
-    │ 
-    └── numerical_experiments/ 
-      ├── small_instance_1/ 
-      ├── small_instance_2/ 
-      ├── medium_instance_1/ 
-      └── medium_instance_2/
-
+```
+offshore-mam-factories-dataset-main/
+│
+├── README.md
+├── LICENSE
+├── CITATION.cff
+│
+└── data/
+    ├── case_study/
+    │   ├── demand_distribution_1/
+    │   ├── demand_distribution_2/
+    │   ├── demand_distribution_3/
+    │   └── demand_distribution_4/
+    │
+    └── numerical_experiments/
+        ├── small_instance_1/
+        ├── small_instance_2/
+        ├── medium_instance_1/
+        └── medium_instance_2/
+```
 Each instance directory contains a complete set of CSV files describing the parameters required to run the optimization model.
 
 ## Dataset Description
